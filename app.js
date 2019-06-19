@@ -1,7 +1,8 @@
-$(function () {
-    console.log("best");
-});
-var imageArray = ["roses", "cats", "ducks", "dogs"];
+// $(function () {
+//     console.log("best");
+// });
+var imageArray = ["roses", "cats", "ducks", "dogs", "hermit crab", "turtle", "parrot", "swan", "chicken", "rabbit", "goldfish"];
+
 // function for displaying imageArray
 function renderButtons() {
     // // Delete the content inside the search-Area div prior to adding new image search
@@ -35,16 +36,38 @@ $("#submit").on("click", function (event) {
 // calling renderbuttons
 renderButtons();
 
+$(document).on("click", ".images", function () {
 
-//     var queryUrl = "https://api.giphy.com/v1/gifs/search?q=" + search + "&api_key=YkbUEwbBuCyi9DJ0fdLjBJ3uuPRbbLRV&limit=10"
-//     // making ajax GET method call // YkbUEwbBuCyi9DJ0fdLjBJ3uuPRbbLRV, api - key
-//     $.ajax({
-//         url: queryUrl,
-//         method: "GET",
-//     }).then(function (response) {
-//         // printing the entire object
-//         console.log(response);
+    var name = $(this).attr('data-type')
 
-//     });
+    var queryUrl = "https://api.giphy.com/v1/gifs/search?q=" + name + "&api_key=YkbUEwbBuCyi9DJ0fdLjBJ3uuPRbbLRV&limit=10"
 
-// });
+    // making ajax GET method call // YkbUEwbBuCyi9DJ0fdLjBJ3uuPRbbLRV, api - key
+    $.ajax({
+        url: queryUrl,
+        method: "GET"
+    }).then(function (response) {
+        // printing the entire object
+        console.log(response);
+        var results = response.data;
+        console.log(results);
+        for (var i = 0; i < results.length; i++) {
+            var imageDiv = $("<div>");
+            var p = $("<p>");
+            p.text("Rating: " + results[i].rating);
+            imageDiv.prepend(p);
+
+            var image = $("<img>");
+            image.attr("src", results[i].images.fixed_height.url);
+            imageDiv.prepend(image);
+            $("#add-animals").prepend(imageDiv);
+        }
+
+
+
+    });
+
+
+
+
+});
