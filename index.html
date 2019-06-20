@@ -7,22 +7,44 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Personal GIPHY Collection!</title>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./style.css">
 </head>
 
 <body>
+    <div class="jumbotron">
+
+        <!-- <div class="col-md-1"></div> -->
+
+        <h1 class="display-4">Personal GIF Generator!</h1>
+        <p class="lead">Enjoy with heartful of laughter , with funny GIF....Click on one of these buttons or
+            create your own!
+
+            <!-- <div class="col-md-1"></div> -->
+
+    </div>
+
     <!-- div to search image collection ;will get dumped here -->
     <div id="search-Area"></div>
 
+
     <!--form for searching images -->
     <form id="search-form">
+
+
         <!-- generate box for holding image titile -->
+
         <label for="search-input"> Choose Your Image Title</label>
 
         <!-- generate Text input button -->
         <input type="text" id="search-input"> <br>
+
         <!-- submit button -->
-        <input id="submit" type="submit" value="Search Image Collection!">
+
+        <input id="submit" type="submit" value="Search Image!">
+
     </form>
 
     <div id="add-animals"></div>

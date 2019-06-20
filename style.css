@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+  }
+  
+
+body{
+    background-color: #E8D3B4;
+    width: 960px;
+    text-align: center;
+    padding-top: 30px;
+}
+.jumbotron{
+    width:960px;
+    background-color:#B0CFC1;
+    margin-left: 25%;
+}
+#search-Area{
+    text-align: center;
+    margin-left: 40%;
+
+}
+.images{
+padding: 5px;
+border-color: azure;
+margin:0 auto;
+margin-left:1%;
+margin-bottom: 3px;
+}
+ #search-input {
+    margin: 0 auto;      
+}
+#search-form{ 
+    margin-left:40%;
+}
+
+#submit{
+    margin:15px;
+    margin-left: 25%;
+}
+
+.gif{
+   float: left;
+    width:  200x;
+    height: 200px;
+    padding: 5px;
+    margin-bottom: 80px;
+    margin-right: 40px;
+}
+p{
+    float:left;
+    position: relative;  
+}

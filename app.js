@@ -1,7 +1,7 @@
 // $(function () {
 //     console.log("best");
 // });
-var imageArray = ["roses", "cats", "ducks", "dogs", "hermit crab", "turtle", "parrot", "swan", "chicken", "rabbit", "goldfish"];
+var imageArray = ["roses", "cats", "ducks", "hermit crab", "turtle", "parrot", "swan", "chicken", "rabbit"];
 
 // function for displaying imageArray
 function renderButtons() {
@@ -52,16 +52,35 @@ $(document).on("click", ".images", function () {
         var results = response.data;
         console.log(results);
         for (var i = 0; i < results.length; i++) {
-            var imageDiv = $("<div>");
+            var imageDiv = $("<div >");
             var p = $("<p>");
             p.text("Rating: " + results[i].rating);
             imageDiv.prepend(p);
 
             var image = $("<img>");
-            image.attr("src", results[i].images.fixed_height.url);
+            image.attr("src", results[i].images.fixed_height_still.url);
+            image.attr("data-still", results[i].images.fixed_height_still.url);
+            image.attr("data-animate", results[i].images.fixed_height.url);
+
+            image.attr("data-state", "still");
+            image.addClass("gif");
             imageDiv.prepend(image);
             $("#add-animals").prepend(imageDiv);
         }
+        $(".gif").on("click", function () {
+            // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
+            var state = $(this).attr("data-state");
+            // If the clicked image's state is still, update its src attribute to what its data-animate value is.
+            // Then, set the image's data-state to animate
+            // Else set src to the data-still value
+            if (state === "still") {
+                $(this).attr("src", $(this).attr("data-animate"));
+                $(this).attr("data-state", "animate");
+            } else {
+                $(this).attr("src", $(this).attr("data-still"));
+                $(this).attr("data-state", "still");
+            }
+        });
 
 
 
