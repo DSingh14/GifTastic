@@ -56,5 +56,57 @@ p {text-align:center;}
 }
 p{
     float: left;
-  
 }
+@media screen and (max-width: 980px) {
+    body {
+      background-color: coral;
+      margin-left: 10px;
+      margin-top: 10%;
+    }
+    .jumbotron {
+      width: 80%;
+      /* margin-right: 30px; */
+      /* margin-left: 30px; */
+      
+    }
+    #search-Area {
+      width: 80%;
+      position: static;
+    }
+    .gif{
+      width: 80%;
+    }
+  }
+  @media screen and (max-width: 768px) {
+      body {
+        background-color: rgb(163, 104, 104);
+      }
+      .jumbotron {
+        width: 650px;
+      } 
+      #search-Area {
+        width: 650px; 
+        position: static;
+      
+      }
+      .gif{
+        width: 80%;
+      } 
+    }
+  @media screen and (max-width: 640px) {
+        body {
+          background-color: rgb(217, 235, 228);
+          margin:0 auto;
+        }
+        .jumbotron {
+          width: 80%;
+         
+        }
+        #search-Area {
+          width: 80%;
+          position: static;
+        } 
+        .gif{
+          width: 80%;
+        } 
+      }
