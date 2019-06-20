@@ -5,20 +5,19 @@
 
 body{
     background-color: #E8D3B4;
-    /* width: 960px; */
     text-align: center;
     padding-top: 30px;
    
 }
 .jumbotron{
-    /* width:960px; */
+    
     background-color:#B0CFC1;
-    /* margin-left: 25%; */
+   
 }
 
 #search-Area{
     text-align: center;
-    /* margin-left: 40%; */
+    
 }
 .lead{margin-left:10%;}
 .images{
@@ -31,17 +30,11 @@ margin-bottom: 3px;
  #search-input {
     margin: 0 auto;      
 }
-#search-form{ 
-    /* margin-left:40%; */
-}
+
 p {text-align:center;}
 #submit{
     margin:15px;
-    /* margin-left: 25%; */
-}
-#add-animals{
-   /*  margin: auto;
-    width:960px; */
+   
 }
 
 
@@ -51,8 +44,7 @@ p {text-align:center;}
     height: 200px;
     margin: 0 auto;
     padding: 10px;
-    /* margin-bottom: 80px; */
-    /* margin-left: 15%; */
+   
 }
 p{
     float: left;
@@ -63,15 +55,11 @@ p{
       margin-left: 10px;
       margin-top: 10%;
     }
-    .jumbotron {
-      width: 80%;
-      /* margin-right: 30px; */
-      /* margin-left: 30px; */
-      
-    }
+   
+    .lead{margin-left:10%;}
     #search-Area {
       width: 80%;
-      position: static;
+      position: absolute;
     }
     .gif{
       width: 80%;
@@ -81,14 +69,14 @@ p{
       body {
         background-color: rgb(163, 104, 104);
       }
-      .jumbotron {
-        width: 650px;
-      } 
+    
       #search-Area {
         width: 650px; 
         position: static;
       
       }
+      .lead{margin-left:10%;
+        }
       .gif{
         width: 80%;
       } 
@@ -98,9 +86,7 @@ p{
           background-color: rgb(217, 235, 228);
           margin:0 auto;
         }
-        .jumbotron {
-          width: 80%;
-         
+        .lead{margin-left:10%;
         }
         #search-Area {
           width: 80%;
